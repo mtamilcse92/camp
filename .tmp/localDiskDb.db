@@ -1,0 +1,584 @@
+{
+  "data": {
+    "template": [
+      {
+        "channelId": 1,
+        "createdAt": "2016-11-10T04:51:41.439Z",
+        "updatedAt": "2016-11-10T04:51:41.469Z",
+        "id": 1
+      },
+      {
+        "channelId": 2,
+        "createdAt": "2016-11-10T05:20:20.941Z",
+        "updatedAt": "2016-11-10T05:20:20.945Z",
+        "id": 2
+      },
+      {
+        "channelId": 3,
+        "createdAt": "2016-11-10T05:22:07.236Z",
+        "updatedAt": "2016-11-10T05:22:07.239Z",
+        "id": 3
+      },
+      {
+        "channelId": 4,
+        "createdAt": "2016-11-10T05:36:30.155Z",
+        "updatedAt": "2016-11-10T05:36:30.183Z",
+        "id": 4
+      },
+      {
+        "channelId": 5,
+        "createdAt": "2016-11-10T05:36:30.228Z",
+        "updatedAt": "2016-11-10T05:36:30.232Z",
+        "id": 5
+      }
+    ],
+    "campaign": [
+      {
+        "createdAt": "2016-11-10T05:20:20.881Z",
+        "updatedAt": "2016-11-10T05:20:20.911Z",
+        "id": 1
+      },
+      {
+        "createdAt": "2016-11-10T05:22:07.214Z",
+        "updatedAt": "2016-11-10T05:22:07.224Z",
+        "id": 2
+      },
+      {
+        "newCampaign": "new",
+        "tags": "tag",
+        "validityFrom": "valid",
+        "validityTo": "aaa",
+        "createdAt": "2016-11-10T05:36:30.130Z",
+        "updatedAt": "2016-11-10T05:36:30.137Z",
+        "id": 3
+      },
+      {
+        "newCampaign": "new",
+        "tags": "tag",
+        "validityFrom": "valid",
+        "validityTo": "aaa",
+        "createdAt": "2016-11-10T06:10:13.071Z",
+        "updatedAt": "2016-11-10T06:10:13.079Z",
+        "id": 4
+      }
+    ],
+    "channel": [
+      {
+        "createdAt": "2016-11-10T04:51:41.419Z",
+        "updatedAt": "2016-11-10T04:51:41.431Z",
+        "id": 1
+      },
+      {
+        "campaignId": 1,
+        "createdAt": "2016-11-10T05:20:20.933Z",
+        "updatedAt": "2016-11-10T05:20:20.937Z",
+        "id": 2
+      },
+      {
+        "campaignId": 2,
+        "createdAt": "2016-11-10T05:22:07.228Z",
+        "updatedAt": "2016-11-10T05:22:07.231Z",
+        "id": 3
+      },
+      {
+        "campaignId": 3,
+        "createdAt": "2016-11-10T05:36:30.145Z",
+        "updatedAt": "2016-11-10T05:36:30.152Z",
+        "id": 4
+      },
+      {
+        "escalationId": 1,
+        "createdAt": "2016-11-10T05:36:30.220Z",
+        "updatedAt": "2016-11-10T05:36:30.224Z",
+        "id": 5
+      },
+      {
+        "campaignId": 4,
+        "createdAt": "2016-11-10T06:10:13.087Z",
+        "updatedAt": "2016-11-10T06:10:13.096Z",
+        "id": 6
+      },
+      {
+        "escalationId": 2,
+        "createdAt": "2016-11-10T06:10:13.116Z",
+        "updatedAt": "2016-11-10T06:10:13.119Z",
+        "id": 7
+      }
+    ],
+    "email": [
+      {
+        "to": [],
+        "content": "aaa",
+        "subject": "aa",
+        "templateId": 1,
+        "createdAt": "2016-11-10T04:51:41.487Z",
+        "updatedAt": "2016-11-10T04:51:41.487Z",
+        "id": 1
+      },
+      {
+        "to": [],
+        "content": "aaa",
+        "subject": "aa",
+        "templateId": 2,
+        "createdAt": "2016-11-10T05:20:20.949Z",
+        "updatedAt": "2016-11-10T05:20:20.949Z",
+        "id": 2
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "subject": "aa",
+        "templateId": 3,
+        "createdAt": "2016-11-10T05:22:07.242Z",
+        "updatedAt": "2016-11-10T05:22:07.242Z",
+        "id": 3
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "subject": "aa",
+        "templateId": 4,
+        "createdAt": "2016-11-10T05:36:30.207Z",
+        "updatedAt": "2016-11-10T05:36:30.207Z",
+        "id": 4
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "subject": "aa",
+        "templateId": 5,
+        "createdAt": "2016-11-10T05:36:30.236Z",
+        "updatedAt": "2016-11-10T05:36:30.236Z",
+        "id": 5
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "subject": "aa",
+        "templateId": 6,
+        "createdAt": "2016-11-10T06:10:13.099Z",
+        "updatedAt": "2016-11-10T06:10:13.099Z",
+        "id": 6
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "subject": "aa",
+        "templateId": 7,
+        "createdAt": "2016-11-10T06:10:13.123Z",
+        "updatedAt": "2016-11-10T06:10:13.123Z",
+        "id": 7
+      }
+    ],
+    "escalation": [
+      {
+        "campaignid": 3,
+        "createdAt": "2016-11-10T05:36:30.214Z",
+        "updatedAt": "2016-11-10T05:36:30.217Z",
+        "id": 1
+      },
+      {
+        "campaignid": 4,
+        "createdAt": "2016-11-10T06:10:13.108Z",
+        "updatedAt": "2016-11-10T06:10:13.111Z",
+        "id": 2
+      }
+    ],
+    "fcm": [
+      {
+        "to": [],
+        "content": "ss",
+        "title": "any",
+        "templateno": 5,
+        "createdAt": "2016-11-10T05:36:30.246Z",
+        "updatedAt": "2016-11-10T05:36:30.246Z",
+        "id": 1
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "title": "any",
+        "templateno": 7,
+        "createdAt": "2016-11-10T06:10:13.133Z",
+        "updatedAt": "2016-11-10T06:10:13.133Z",
+        "id": 2
+      }
+    ],
+    "group": [],
+    "people": [
+      {
+        "name": "people",
+        "channel_id": 4,
+        "createdAt": "2016-11-10T05:36:30.210Z",
+        "updatedAt": "2016-11-10T05:36:30.210Z",
+        "id": 1
+      },
+      {
+        "name": "people",
+        "channel_id": 6,
+        "createdAt": "2016-11-10T06:10:13.103Z",
+        "updatedAt": "2016-11-10T06:10:13.103Z",
+        "id": 2
+      }
+    ],
+    "rule": [],
+    "sms": [
+      {
+        "to": [],
+        "content": "ss",
+        "template_id": 5,
+        "createdAt": "2016-11-10T05:36:30.239Z",
+        "updatedAt": "2016-11-10T05:36:30.239Z",
+        "id": 1
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "template_id": 7,
+        "createdAt": "2016-11-10T06:10:13.126Z",
+        "updatedAt": "2016-11-10T06:10:13.126Z",
+        "id": 2
+      }
+    ],
+    "webpush": [
+      {
+        "to": [],
+        "content": "ss",
+        "template": 5,
+        "createdAt": "2016-11-10T05:36:30.242Z",
+        "updatedAt": "2016-11-10T05:36:30.242Z",
+        "id": 1
+      },
+      {
+        "to": [],
+        "content": "ss",
+        "template": 7,
+        "createdAt": "2016-11-10T06:10:13.130Z",
+        "updatedAt": "2016-11-10T06:10:13.130Z",
+        "id": 2
+      }
+    ],
+    "group_peoples__people_groups": []
+  },
+  "schema": {
+    "template": {
+      "channelId": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "channelId"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "campaign": {
+      "newCampaign": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "string"
+      },
+      "validityFrom": {
+        "type": "string"
+      },
+      "validityTo": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "channel": {
+      "campaignId": {
+        "type": "integer",
+        "model": "campaign",
+        "foreignKey": true,
+        "alias": "campaignId"
+      },
+      "escalationId": {
+        "type": "integer",
+        "model": "escalation",
+        "foreignKey": true,
+        "alias": "escalationId"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "email": {
+      "to": {
+        "type": "array"
+      },
+      "content": {
+        "type": "string"
+      },
+      "subject": {
+        "type": "string"
+      },
+      "templateId": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "templateId"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "escalation": {
+      "campaignid": {
+        "type": "integer",
+        "model": "campaign",
+        "foreignKey": true,
+        "alias": "campaignid"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "fcm": {
+      "to": {
+        "type": "array"
+      },
+      "content": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "templateno": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "templateno"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "group": {
+      "groupName": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "people": {
+      "name": {
+        "type": "string"
+      },
+      "channel_id": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "channel_id"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "rule": {
+      "name": {
+        "type": "string"
+      },
+      "campaigns": {
+        "type": "integer",
+        "model": "campaign",
+        "foreignKey": true,
+        "alias": "campaigns"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "sms": {
+      "to": {
+        "type": "array"
+      },
+      "content": {
+        "type": "string"
+      },
+      "template_id": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "template_id"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "webpush": {
+      "to": {
+        "type": "array"
+      },
+      "content": {
+        "type": "string"
+      },
+      "template": {
+        "type": "integer",
+        "model": "channel",
+        "foreignKey": true,
+        "alias": "template"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "group_peoples__people_groups": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "group_peoples": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "group",
+        "on": "id",
+        "via": "people_groups"
+      },
+      "people_groups": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "people",
+        "on": "id",
+        "via": "group_peoples"
+      }
+    }
+  },
+  "counters": {
+    "campaign": {
+      "id": 4
+    },
+    "channel": {
+      "id": 7
+    },
+    "email": {
+      "id": 7
+    },
+    "escalation": {
+      "id": 2
+    },
+    "fcm": {
+      "id": 2
+    },
+    "group": {},
+    "people": {
+      "id": 2
+    },
+    "rule": {},
+    "sms": {
+      "id": 2
+    },
+    "template": {
+      "id": 5
+    },
+    "webpush": {
+      "id": 2
+    },
+    "group_peoples__people_groups": {}
+  }
+}
