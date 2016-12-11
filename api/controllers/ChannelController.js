@@ -30,13 +30,18 @@ module.exports = {
       if(err){
         res.send(err, 500);
       }
+      var result = {
+        email:[],
+        sms:[],
+        webPush:[],
+        pushNotification:[]
+      }
       var response = {};
-
-      response.email = _.map(show,'email');
-      response.sms = _.map(show,'sms');
-      response.webPush = _.flatten(_.map(show,'webPush'));
-      response.pushNotification = _.flatten(_.map(show,'pushNotification'));
-      res.json(response);
+      _.each(_.flatten((_.map(show,'email'))), e => { result.email.push(e)})
+      _.each(_.flatten((_.map(show,'sms'))), e => { result.sms.push(e)})
+      _.each(_.flatten((_.map(show,'webPush'))), e => { result.webPush.push(e)})
+      _.each(_.flatten((_.map(show,'pushNotification'))), e => { result.pushNotification.push(e)})
+      res.json(result);
     });
     },
 
