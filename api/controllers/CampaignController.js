@@ -92,7 +92,7 @@ module.exports = {
                     var id = createdCampaign.id;
                     var result = createdCampaign;
                     console.log("createdCampaign-->",createdCampaign);
-                    return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webpush', 'fcm']).then(function(campChannel) {
+                    return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webPush', 'pushNotification']).then(function(campChannel) {
                         //todo: avoid this fetch again
                         return Escalation.findOne().where({ campaignid: id }).then(function(foundEscalation) {
                             if (_.isEmpty(foundEscalation) == true) {

@@ -20,15 +20,15 @@ module.exports = {
       via: 'template_id'
 
     },
-    webpush:
+    webPush:
     {
       collection: 'webpush',
       via: 'template'
     },
 
-    fcm:
+    pushNotification:
     {
-      collection: 'fcm',
+      collection: 'pushNotification',
       via: 'templateno'
     },
 
