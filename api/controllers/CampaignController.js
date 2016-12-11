@@ -32,7 +32,7 @@ module.exports = {
             Q.all(_.map(campaigns, campaign => {
                     var id = campaign.id;
                     var result = campaign;
-                    return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webpush', 'fcm']).then(function(campChannel) {
+                    return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webPush', 'pushNotification']).then(function(campChannel) {
                         //todo: avoid this fetch again
                         return Escalation.findOne().where({ campaignid: id }).then(function(foundEscalation) {
                             if (_.isEmpty(foundEscalation) == true) {
@@ -42,15 +42,12 @@ module.exports = {
                             var escalation = foundEscalation;
                             var id = escalation.id;
                             return Channel.find().where({ escalationId: id })
-                                .populate(['email', 'sms', 'webpush', 'fcm'])
+                                .populate(['email', 'sms', 'webPush', 'pushNotification'])
                                 .then(function(escChannel) {
-                                    return Rule.find().where({ campaigns: id }).then(function(rule) {
-                                        result["Rule"] = rule;
                                         result["Channel"] = campChannel;
                                         escalation["Channel"] = escChannel;
                                         result["Escalation"] = escalation;
                                         return result;
-                                    });
                                 });
 
                         });
@@ -104,13 +101,10 @@ module.exports = {
                             return Channel.find().where({ escalationId: id })
                                 .populate(['email', 'sms', 'webpush', 'fcm'])
                                 .then(function(escChannel) {
-                                    return Rule.find().where({ campaigns: id }).then(function(rule) {
-                                        result["Rule"] = rule;
                                         result["Channel"] = campChannel;
                                         escalation["Channel"] = escChannel;
                                         result["Escalation"] = escalation;
                                         return result;
-                                    });
                                 });
 
                         });

@@ -36,8 +36,7 @@ module.exports = {
     },
     rule:
     {
-      collection: 'rule',
-      via: 'campaigns'
+      type: 'string'
     }
   }
 };
