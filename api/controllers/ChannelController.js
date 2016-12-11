@@ -30,8 +30,13 @@ module.exports = {
       if(err){
         res.send(err, 500);
       }
-      console.log(show);
-      res.json(show);
+      var response = {};
+
+      response.email = _.map(show,'email');
+      response.sms = _.map(show,'sms');
+      response.webPush = _.flatten(_.map(show,'webPush'));
+      response.pushNotification = _.flatten(_.map(show,'pushNotification'));
+      res.json(response);
     });
     },
 
