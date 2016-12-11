@@ -22,7 +22,7 @@ module.exports = {
     },
     webPush:
     {
-      collection: 'webpush',
+      collection: 'webPush',
       via: 'template'
     },
 

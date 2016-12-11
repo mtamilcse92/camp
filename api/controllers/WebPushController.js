@@ -1,7 +1,7 @@
 /**
- * FcmController
+ * WebPushController
  *
- * @description :: Server-side logic for managing fcms
+ * @description :: Server-side logic for managing WebPushes
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
@@ -10,9 +10,9 @@ module.exports = {
 
 
   /**
-   * `FcmController.index()`
+   * `WebPushController.index()`
    */
-  // index: function (req, res) {
+   // index: function (req, res) {
   //   return res.json({
   //     todo: 'index() is not implemented yet!'
   //   });
@@ -20,11 +20,11 @@ module.exports = {
 
 
   /**
-   * `FcmController.show()`
+   * `WebPushController.show()`
    */
   show: function (req, res) {
     // var id = req.param('id');
-    Fcm.find(function(err, show){
+    WebPush.find(function(err, show){
       if(err){
         res.send(err, 500);
       }
@@ -35,7 +35,7 @@ module.exports = {
 
 
   /**
-   * `FcmController.new()`
+   * `WebPushController.new()`
    */
   new: function (req, res) {
     return res.json({
@@ -45,11 +45,11 @@ module.exports = {
 
 
   /**
-   * `FcmController.create()`
+   * `WebPushController.create()`
    */
   create: function (req, res) {
     var param = req.allParams();
-    Fcm.create(param, function(err, created){
+    WebPush.create(param, function(err, created){
       if(err){
         res.send(err, 500);
       }
@@ -59,13 +59,12 @@ module.exports = {
   },
 
 
-
   /**
-   * `FcmController.edit()`
+   * `WebPushController.edit()`
    */
-    edit: function (req, res) {
+  edit: function (req, res) {
    var id = req.param('id');
-   Fcm.findOne(id, function(err, edited){
+   WebPush.findOne(id, function(err, edited){
     if(err){
       res.send(err, 500);
     }
@@ -76,12 +75,12 @@ module.exports = {
 
 
   /**
-   * `FcmController.update()`
+   * `WebPushController.update()`
    */
-   update: function (req, res) {
+  update: function (req, res) {
     var id = req.param('id');
     var param = req.allParams();
-    Fcm.update(id, param, function(err, updated){
+    WebPush.update(id, param, function(err, updated){
       if(err){
         res.send(err, 500);
       }
@@ -90,17 +89,18 @@ module.exports = {
     });
   },
 
+
   /**
-   * `FcmController.destroy()`
+   * `WebPushController.destroy()`
    */
   destroy: function (req, res) {
    var id = req.param('id');
-   Fcm.findOne(id, function(err,findfcm){
+   WebPush.findOne(id, function(err,findWebPush){
     if(err){
       res.send(err, 500);
     }
-    console.log(findemail);
-    Fcm.destroy(id, function(err, destroyed){
+    console.log(findWebPush);
+    WebPush.destroy(id, function(err, destroyed){
       if(err){
         res.send(err, 500);
       }

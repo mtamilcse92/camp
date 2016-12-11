@@ -26,7 +26,7 @@ module.exports = {
   show: function (req, res) {
     
     //Channel.find().populate(['email','people','sms','webpush','fcm']).exec(function(err, show){
-    Channel.find().populate(['email','sms','webpush','fcm']).exec(function(err, show){
+    Channel.find().populate(['email','sms','webPush','pushNotification']).exec(function(err, show){
       if(err){
         res.send(err, 500);
       }

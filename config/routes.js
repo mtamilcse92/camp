@@ -85,26 +85,21 @@ module.exports.routes = {
 
 //routes for fcm
 
-  'get /fcm':
+  'post /pushNotification':
   {
-    controller: 'fcm',
-    action: 'show'
-  },
-  'post /fcm':
-  {
-    controller: 'fcm',
+    controller: 'pushNotification',
     action: 'create'
   },
 
-  'put /fcm/:id':
+  'put /pushNotification/:id':
   {
-    controller: 'fcm',
+    controller: 'pushNotification',
     action: 'update'
   },
 
-  'delete /fcm/:id':
+  'delete /pushNotification/:id':
   {
-    controller: 'fcm',
+    controller: 'pushNotification',
     action: 'destroy'
   },
 
@@ -205,22 +200,22 @@ module.exports.routes = {
   
 
   //routes for channels 
-    'get /channels':
+    'get /channel':
   {
     controller: 'channel',
     action: 'show'
   },
-  'post /channels':
+  'post /channel':
   {
     controller: 'channel',
     action: 'create'
   },
-  'put /channels/:id':
+  'put /channel/:id':
   {
     controller: 'channel',
     action: 'update'
   },
-  'delete /channels/:id':
+  'delete /channel/:id':
   {
     controller: 'channel',
     action: 'destroy'
