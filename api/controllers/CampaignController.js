@@ -33,6 +33,9 @@ module.exports = {
                     var id = campaign.id;
                     var result = campaign;
                     return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webPush', 'pushNotification']).then(function(campChannel) {
+                        if (_.isEmpty(campChannel) == true) {
+                                result["Channel"] = [];
+                            }
                         //todo: avoid this fetch again
                         return Escalation.findOne().where({ campaignid: id }).then(function(foundEscalation) {
                             if (_.isEmpty(foundEscalation) == true) {
@@ -84,13 +87,14 @@ module.exports = {
         var param = req.allParams();
         var firstCampaign;
 
-        // Campaign.create(param, function( createdCampaign) {
         Campaign.create(param).then(function(createdCampaign) {
                     var id = createdCampaign.id;
                     var result = createdCampaign;
                     console.log("createdCampaign-->",createdCampaign);
                     return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webPush', 'pushNotification']).then(function(campChannel) {
-                        //todo: avoid this fetch again
+                        if (_.isEmpty(campChannel) == true) {
+                                result["Channel"] = [];
+                            }                                                       
                         return Escalation.findOne().where({ campaignid: id }).then(function(foundEscalation) {
                             if (_.isEmpty(foundEscalation) == true) {
                                 result["Channel"] = campChannel;
@@ -99,7 +103,7 @@ module.exports = {
                             var escalation = foundEscalation;
                             var id = escalation.id;
                             return Channel.find().where({ escalationId: id })
-                                .populate(['email', 'sms', 'webpush', 'fcm'])
+                                .populate(['email', 'sms', 'webPush', 'pushNotification'])
                                 .then(function(escChannel) {
                                         result["Channel"] = campChannel;
                                         escalation["Channel"] = escChannel;
@@ -141,14 +145,46 @@ module.exports = {
     update: function(req, res) {
         var id = req.param('id');
         var param = req.allParams();
-        Campaign.update(id, param, function(err, updated) {
-            if (err) {
-                console.log(err);
-                res.send(err, 500);
-            }
-            console.log(updated);
-            res.json(updated);
-        });
+
+        // Campaign.create(param).then(function(createdCampaign) {
+        Campaign.update(id, param, function(err, updatedCampaign) {
+             Q.all(_.map(updatedCampaign, campaign => {
+                    var id = campaign.id;
+                    var result = campaign;
+                    console.log("updatedCampaign-->",result);
+                    return Channel.find().where({ campaignId: id }).populate(['email', 'sms', 'webPush', 'pushNotification']).then(function(campChannel) {
+                        if (_.isEmpty(campChannel) == true) {
+                                result["Channel"] = [];
+                            }                                                       
+                                console.log(result);
+                        return Escalation.findOne().where({ campaignid: id }).then(function(foundEscalation) {
+                            if (_.isEmpty(foundEscalation) == true) {
+                                result["Channel"] = campChannel;
+                                return result;
+                            }
+                            var escalation = foundEscalation;
+                            var id = escalation.id;
+                            return Channel.find().where({ escalationId: id })
+                                .populate(['email', 'sms', 'webPush', 'pushNotification'])
+                                .then(function(escChannel) {
+                                        result["Channel"] = campChannel;
+                                        escalation["Channel"] = escChannel;
+                                        result["Escalation"] = escalation;
+                                        return result;
+                                });
+
+                        });
+                    });
+             })).then(function(value) {
+                    console.log("result------>",value);
+                    res.json(value);
+                }, function(err) {
+                    if (err) {
+                        res.send(err, 500);
+                    }
+                });
+           
+                });
     },
 
 

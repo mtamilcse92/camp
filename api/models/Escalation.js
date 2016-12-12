@@ -14,7 +14,7 @@ module.exports = {
     },  
     value:
     {
-      type: 'integer'
+      type: 'string'
     },
     unit:
     {

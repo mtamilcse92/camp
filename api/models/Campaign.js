@@ -18,11 +18,11 @@ module.exports = {
   	},
   	from:
   	{
-  		type: 'date'
+  		type: 'string'
   	},
   	to:
   	{
-  		type: 'date'
+  		type: 'string'
   	},
     channel:
     {
